@@ -1,9 +1,9 @@
-const http = require('http');
-const handleRequest = require('./src/handler');
-const { PORT } = require('./src/config');
+const http = require("http");
 
-const server = http.createServer(handleRequest);
+const server = http.createServer((req, res) => {
+    res.end("Hello from CI/CD!");
+});
 
-server.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+server.listen(80, () => {
+    console.log("Server running on port 80");
 });
