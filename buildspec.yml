@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Installing Dependencies"
+  build:
+    commands:
+      - echo "Zipping build"
+      - zip -r build.zip .
+
+artifacts:
+  files:
+    - build.zip
